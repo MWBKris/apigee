@@ -41,7 +41,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         var client = new Apigee.Client({
-            orgName:"YOUR APIGEE.COM USERNAME",
+            orgName:"krismwb",
             appName:"sandbox",
             logging:true
         });
@@ -49,7 +49,7 @@ var app = {
         pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
             if(status.deviceToken) {
                 var options = {
-                    notifier:"YOUR NOTIFIER",
+                    notifier:"appleDev",
                     deviceToken:status.deviceToken
                 };
                 
@@ -68,7 +68,7 @@ var app = {
             
             var devicePath = "devices/"+client.getDeviceUUID()+"/notifications";
             var options = {
-                notifier:"YOUR NOTIFIER",
+                notifier:"appleDev",
                 path:devicePath,
                 message:"hello world from JS"
             };
