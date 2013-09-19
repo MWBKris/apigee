@@ -47,8 +47,10 @@ var app = {
             logging:true
         });
         var pushNotification = window.plugins.pushNotification;
+		alert("1");
         pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
-            if(status.deviceToken) {
+            alert(status.deviceToken);
+			if(status.deviceToken) {
                 var options = {
                     notifier:"appleDev",
                     deviceToken:status.deviceToken
