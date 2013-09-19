@@ -40,6 +40,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        alert('deviceready');
         var client = new Apigee.Client({
             orgName:"krismwb",
             appName:"sandbox",
@@ -55,9 +56,9 @@ var app = {
                 
                 client.registerDevice(options, function(error, result){
                   if(error) {
-                    console.log(error);
+                    alert(error);
                   } else {
-                    console.log(result);
+                    alert(result);
                   }
                 });
             }
@@ -74,9 +75,9 @@ var app = {
             };
             client.sendPushToDevice(options, function(error, data){
                 if(error) {
-                    console.log(data);
+                    alert(data);
                 } else {
-                    console.log("push sent");
+                    alert("push sent");
                 }
             });
         });
