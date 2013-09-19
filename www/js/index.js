@@ -22,7 +22,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-		alert("start1.1");
+		alert("start1.2");
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -47,7 +47,9 @@ var app = {
             appName:"sandbox",
             logging:true
         });
+		alert('check');
         var pushNotification = window.plugins.pushNotification;
+		alert('check2');
         pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
             if(status.deviceToken) {
                 var options = {
