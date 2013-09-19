@@ -22,6 +22,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+		alert("start");
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -29,7 +30,9 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+		alert("start2");
         document.addEventListener('deviceready', this.onDeviceReady, false);
+		alert("start3");
         document.addEventListener('push-notification', function(event) {
             console.log('push-notification!:'+JSON.stringify(event.notification));
             navigator.notification.alert(event.notification.aps.alert);
