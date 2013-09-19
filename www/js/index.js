@@ -32,8 +32,8 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('push-notification', function(event) {
-            console.log('push-notification!:'+JSON.stringify(event.notification));
-            navigator.notification.alert(event.notification.aps.alert);
+           /* console.log('push-notification!:'+JSON.stringify(event.notification));
+            navigator.notification.alert(event.notification.aps.alert);*/
         });
     },
     // deviceready Event Handler
@@ -42,7 +42,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 		alert("start2.0");
-        var client = new Apigee.Client({
+        /*var client = new Apigee.Client({
             orgName:"krismwb",
             appName:"sandbox",
             logging:true
@@ -83,17 +83,17 @@ var app = {
             });
         });
         
-        app.receivedEvent('deviceready');
+        app.receivedEvent('deviceready');*/
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+        /*var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);*/
     }
 };
