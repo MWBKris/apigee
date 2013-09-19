@@ -22,7 +22,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-		alert("start1.3");
+		alert("start1.0");
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -32,8 +32,8 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('push-notification', function(event) {
-           /* console.log('push-notification!:'+JSON.stringify(event.notification));
-            navigator.notification.alert(event.notification.aps.alert);*/
+            console.log('push-notification!:'+JSON.stringify(event.notification));
+            navigator.notification.alert(event.notification.aps.alert);
         });
     },
     // deviceready Event Handler
@@ -41,8 +41,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		alert("start2.0");
-        /*var client = new Apigee.Client({
+		alert("start3");
+        var client = new Apigee.Client({
             orgName:"krismwb",
             appName:"sandbox",
             logging:true
@@ -83,17 +83,17 @@ var app = {
             });
         });
         
-        app.receivedEvent('deviceready');*/
+        app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        /*var parentElement = document.getElementById(id);
+        var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);*/
+        console.log('Received Event: ' + id);
     }
 };
