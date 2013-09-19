@@ -31,10 +31,10 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener('push-notification', function(event) {
+        /*document.addEventListener('push-notification', function(event) {
             console.log('push-notification!:'+JSON.stringify(event.notification));
             navigator.notification.alert(event.notification.aps.alert);
-        });
+        });*/
     },
     // deviceready Event Handler
     //
